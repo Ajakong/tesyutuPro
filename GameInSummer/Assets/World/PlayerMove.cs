@@ -28,8 +28,8 @@ public class PlayerMove : MonoBehaviour
     {
         DDOLFlag = 0;
         DontDestroyOnLoad(this.gameObject);
+
         enPos = Vector3.zero;
-        
         speed = 0.05f;
         encountFlag = false;
         encountCharge=0;
@@ -42,14 +42,14 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //Debug.Log(encountCharge);
+        
+        Debug.Log(moveFlag);
         //移動
         Vector3 position = transform.position;
         
         if (encountCharge == 0)
         {
-            
+            Debug.Log(enPos);
              position=enPos;
         }
         transform.position = enPos;
@@ -120,6 +120,40 @@ public class PlayerMove : MonoBehaviour
         }
 
 
+        //エンカウント処理
+
+        if (encountCharge > 20)
+        {
+            postEncountCharge = encountCharge;
+
+            encount = Random.Range(0, 200);
+
+            //Debug.Log(encount);
+            if (encount == 1)
+            {
+                encountCharge = 0;
+                if (areaNum == 0)
+                {
+                    enPos = transform.position;
+                    //Debug.Log("入れました");
+                    SceneManager.LoadScene("battle" + "Scene");
+                }
+                if (areaNum == 1)
+                {
+                    enPos = transform.position;
+                    //Debug.Log("入れました");
+                    SceneManager.LoadScene("world" + "Zako");
+                }
+                if (areaNum == 2)
+                {
+                    enPos = transform.position;
+                    //Debug.Log("入れました");
+                    SceneManager.LoadScene("forestshadow");
+                }
+            }
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -128,38 +162,7 @@ public class PlayerMove : MonoBehaviour
         {
             encountCharge++;
         }
-        //エンカウント処理
-
-        if (encountCharge > 200)
-        {
-            postEncountCharge = encountCharge;
-
-            encount = Random.Range(0, 200);
-
-            Debug.Log(encount);
-            if (encount == 1)
-            {
-                encountCharge = 0;
-                if(areaNum == 0)
-                {
-                    enPos = transform.position;
-                    Debug.Log("入れました");
-                    SceneManager.LoadScene("battle" + "Scene");
-                }
-                if (areaNum == 1)
-                {
-                    enPos = transform.position;
-                    Debug.Log("入れました");
-                    SceneManager.LoadScene("world" + "Zako");
-                }
-                if (areaNum == 2)
-                {
-                    enPos = transform.position;
-                    Debug.Log("入れました");
-                    SceneManager.LoadScene("forestshadow");
-                }
-            }
-        }
+       
     }
 
     public int areaMove

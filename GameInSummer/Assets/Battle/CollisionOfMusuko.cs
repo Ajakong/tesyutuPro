@@ -13,7 +13,7 @@ public class CollisionOfMusuko : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.enel = FindObjectOfType<EnemyState>();
+//        this.enel = GameObject.Find("Enemy").GetComponent<EnemyState>();//FindObjectOfType<EnemyState>();
     }
 
     // Update is called once per frame
@@ -26,13 +26,15 @@ public class CollisionOfMusuko : MonoBehaviour
     {
         if (collision.gameObject.name == targetObjectName)
         {
-            
-            //int hp = enel.hpMove;
-
+            enel = collision.GetComponent<EnemyState>();
+            hp = enel.hpMove;
+            //            hp = enel.hpMove;
             enel.hpMove -= 20;
-            if(enel.hpMove==0)
+//            enel.hpMove = hp - 20;
+//            if(enel.hpMove==0)
+            if (hp <= 0)
             {
-                enel = null;
+//                enel = null;
                 hp = 0;
             }
         }

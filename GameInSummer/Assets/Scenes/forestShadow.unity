@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 1856049290}
   - component: {fileID: 1856049289}
   - component: {fileID: 1856049288}
-  - component: {fileID: 1856049287}
+  - component: {fileID: 1856049292}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -742,19 +742,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1856049287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856049285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5329a075cfa6ca540a9560d4c6099ea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modeFury: 0
 --- !u!50 &1856049288
 Rigidbody2D:
   serializedVersion: 4
@@ -870,6 +857,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1856049292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856049285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eae55f615dab504c86df9bb941bf723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modeFury: 0
 --- !u!1 &2008444868
 GameObject:
   m_ObjectHideFlags: 0

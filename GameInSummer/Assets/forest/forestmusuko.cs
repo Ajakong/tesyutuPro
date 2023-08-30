@@ -29,7 +29,7 @@ public class forestmusuko : MonoBehaviour
         if (collision.gameObject.name == targetObjectName)
         {
 
-            //int hp = enel.hpMove;
+            hp = enel.hpMove;
 
             enel.hpMove -= 20;
             if (enel.hpMove == 0)
