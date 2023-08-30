@@ -20,7 +20,7 @@ public class SsceneManage : MonoBehaviour
         //Debug.Log("“®‚¢‚Ä‚é‚æ");
         pos = player.transform.position;
 
-        pos = new Vector3(0, 0, 0);
+        pos = new Vector3(0, 2, 0);
         player.transform.position = pos;
     }
 }
