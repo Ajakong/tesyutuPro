@@ -6,7 +6,7 @@ public class forestmusuko : MonoBehaviour
 {
 
 
-    EnemyState enel;
+    FEnemyState enel;
 
 
     int hp = 0;
@@ -15,7 +15,7 @@ public class forestmusuko : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.enel = FindObjectOfType<EnemyState>();
+        this.enel = FindObjectOfType<FEnemyState>();
     }
 
     // Update is called once per frame

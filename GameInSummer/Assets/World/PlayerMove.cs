@@ -23,6 +23,8 @@ public class PlayerMove : MonoBehaviour
 
     Vector3 enPos = new Vector3();
 
+    Vector3 Pos = new Vector3();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,21 +110,19 @@ public class PlayerMove : MonoBehaviour
 
         
 
-        //マップ移動
-        if(transform.position.y > 9)
-        {
-            areaNum = 2;
-                   }
-        if (transform.position.y > 50)
-        {
-            areaNum = 3;
-           
-        }
+        
 
+
+        Pos = this.transform.position;
+
+        if(Pos.x>400)
+        {
+            encountCharge = 0;
+        }
 
         //エンカウント処理
 
-        if (encountCharge > 20)
+        if (encountCharge > 500)
         {
             postEncountCharge = encountCharge;
 
@@ -158,6 +158,8 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(areaNum);
+
         if(moveFlag==true)
         {
             encountCharge++;
