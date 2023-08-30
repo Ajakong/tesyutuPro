@@ -10,17 +10,17 @@ public class FSceneManage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("player");
+        //Debug.Log("“®‚¢‚Ä‚é‚æ");
+        pos = player.transform.position;
 
+        pos = new Vector3(0, 2, 0);
+        player.transform.position = pos;
     }
 
     // Update is called once per frame
     void Update()
     {
-        player = GameObject.Find("player");
-        //Debug.Log("“®‚¢‚Ä‚é‚æ");
-        pos = player.transform.position;
-
-        pos = new Vector3(0, 0, 0);
-        player.transform.position = pos;
+       
     }
 }
