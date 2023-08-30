@@ -23,7 +23,7 @@ public class musukoMove : MonoBehaviour
         localScale = transform.localScale;
         reset= transform.localScale;
         timer = 0;
-        move = new Vector3(0.01f, 0, 0);
+        move = new Vector3(0.1f, 0, 0);
     }
 
     private void Update()

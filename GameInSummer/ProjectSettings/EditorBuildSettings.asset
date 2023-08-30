@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Origin.unity
+    guid: 5c84fcea235f7cb438ae2b4e7841adfc
+  - enabled: 1
     path: Assets/Scenes/battleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/forest.unity
+    guid: cb0ba5342a5288b4ab6acba998ec1531
+  - enabled: 1
+    path: Assets/Scenes/forestShadow.unity
+    guid: 06a4d5d2abc5db5409277e2e8d134d64
+  - enabled: 1
+    path: Assets/Scenes/worldScene.unity
+    guid: 7e5d19ff9e058824eb1ca4db3c491e64
+  - enabled: 1
+    path: Assets/Scenes/worldZako.unity
+    guid: 444cc736aa549484cb2c34cb522f123d
+  - enabled: 1
+    path: Assets/Scenes/Wild2.unity
+    guid: 1b5b031b738144746a3d6c6c1387fa86
+  - enabled: 1
+    path: Assets/Scenes/sandLand.unity
+    guid: 52ceccc1f3345114c8291f0036b948d6
   m_configObjects: {}

@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad785d0f18f7d74c8324b49c1f69ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: 
+  targetObjectName: Enemy
 --- !u!1 &1608637422
 GameObject:
   m_ObjectHideFlags: 0

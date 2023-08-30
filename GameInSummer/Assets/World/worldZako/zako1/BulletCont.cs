@@ -13,7 +13,7 @@ public class BulletCont : MonoBehaviour
     
     private void Start()
     {
-        move = new Vector3(-0.02f, 0, 0);
+        move = new Vector3(-0.2f, 0, 0);
         reset = transform.position;
     }
     // Update is called once per frame

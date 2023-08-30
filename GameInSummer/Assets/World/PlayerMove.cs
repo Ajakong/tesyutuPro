@@ -30,11 +30,11 @@ public class PlayerMove : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         enPos = Vector3.zero;
         
-        speed = 0.005f;
+        speed = 0.05f;
         encountFlag = false;
         encountCharge=0;
         postEncountCharge=0;
-        areaNum = 0;
+        areaNum = 5;
         
 
     }
@@ -55,25 +55,25 @@ public class PlayerMove : MonoBehaviour
         transform.position = enPos;
         if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
         {
-            speed = 0.0025f;
+            speed = 0.025f;
             //encountCharge++;
             moveFlag = true;
         }
         if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow))
         {
-            speed = 0.0025f;
+            speed = 0.025f;
             //encountCharge++;
             moveFlag = true;
         }
         if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
         {
-            speed = 0.0025f;
+            speed = 0.025f;
             //encountCharge++;
             moveFlag = true;
         }
         if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow))
         {
-            speed = 0.0025f;
+            speed = 0.025f;
             //encountCharge++;
             moveFlag = true;
         }
@@ -102,7 +102,7 @@ public class PlayerMove : MonoBehaviour
             moveFlag = false;
         }
         transform.position = position;
-        speed = 0.005f;
+        speed = 0.05f;
 
 
 
@@ -152,8 +152,20 @@ public class PlayerMove : MonoBehaviour
                     Debug.Log("“ü‚ê‚Ü‚µ‚½");
                     SceneManager.LoadScene("world" + "Zako");
                 }
+                if (areaNum == 2)
+                {
+                    enPos = transform.position;
+                    Debug.Log("“ü‚ê‚Ü‚µ‚½");
+                    SceneManager.LoadScene("forestshadow");
+                }
             }
         }
+    }
+
+    public int areaMove
+    {
+        get { return areaNum; }
+        set { areaNum= value; }
     }
 
 

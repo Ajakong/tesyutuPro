@@ -29,7 +29,7 @@ public class EnemyState : MonoBehaviour
         {
 
             //Ÿ—˜‰‰o
-            SceneManager.LoadScene("forest");
+            SceneManager.LoadScene("worldScene");
         }
         if(furyGage==200)
         {
