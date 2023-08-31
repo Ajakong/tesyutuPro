@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.PlayerSettings;
+//using UnityEditor.PlayerSettings;
 
 public class WorldWarp : MonoBehaviour
 {
